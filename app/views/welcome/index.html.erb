@@ -7,12 +7,23 @@
     </div>
   </div>
 </div>
+<div class="blankcontainer">
+
+</div>
   <div class="container">
     <div class="row">
+      <div class="col-md-8">
       <% @blogs.each do |blog| %>
-      <%= blog.headline %>
-      <%= blog.story %>
-      by <%= blog.name %>
-      <% end %>
+        <%= blog.headline %>
+        <%= blog.story %>
+        by <%= blog.name %>
+        <br>
+        <% end %>
+      </div>
+      <div class="col-md-4">
+        <p>
+          Steph Curry is a better team player than LeBron.
+        </p>
+      </div>
     </div>
   </div>

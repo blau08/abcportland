@@ -21,6 +21,11 @@ video#bgvid {
   z-index: -5;
 }
 
+.blankcontainer {
+  height: 350px;
+  display: block;
+}
+
 @media (max-width:917px) {
     .header-text {
         display:none !important;
