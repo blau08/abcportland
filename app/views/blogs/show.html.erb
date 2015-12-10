@@ -1,0 +1,29 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <h1><%= @blog.headline%></h1>
+
+      <br>
+      <br>
+      by <%= @blog.name%>
+      <br>
+      <%= @blog.created_at.in_time_zone("Pacific Time (US & Canada)").strftime "%B %d, %Y %l:%M %P"  %>
+      <hr>
+      <%= @blog.story%>
+
+      <!-- <% if current_user %>
+      <p><%= link_to "Edit", edit_student_path(@blog) %></p>
+      <p><%= link_to "Delete", student_path(@blog), :method => 'delete' %></p>
+      <% end %> -->
+      <br>
+      <br>
+      <p>
+        <%= link_to "Return to home", root_path %>
+      </p>
+
+
+
+    </div>
+  </div>
+</div>
