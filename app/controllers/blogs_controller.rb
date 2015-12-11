@@ -5,6 +5,7 @@ class BlogsController < ApplicationController
 
   def create
     @blog = Blog.new(blog_params)
+    @blog.name = current_user.name
     if @blog.save
       redirect_to root_path
     else
@@ -32,6 +33,6 @@ class BlogsController < ApplicationController
 
   private
   def blog_params
-    params.require(:blog).permit(:name, :headline, :story)
+    params.require(:blog).permit(:headline, :story)
   end
 end
