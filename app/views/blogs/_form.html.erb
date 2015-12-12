@@ -6,6 +6,11 @@
       <br>
       <%= f.text_area :story, class: 'form-control', rows: '5', placeholder: 'Enter Story' %>
       <br>
+      <%= f.label :image,'Upload An Image'%>
+      <br>
+      <div id="filefield">
+        <%= f.file_field :image %>
+      </div>
       <%= f.submit class: 'btn btn-default'%>
       <% end %>
     </div>

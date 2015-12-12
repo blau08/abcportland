@@ -14,10 +14,23 @@
     <div class="row">
       <div class="col-md-8">
       <% @blogs.each do |blog| %>
-        <%= blog.headline %>
-        <%= blog.story %>
-        by <%= blog.name %>
+      <div class="col-md-2">
+        <div class="thumbnail">
+        <%= image_tag blog.image.url(:medium) %>
+        </div>
+      </div>
+      <div class="col-md-6">
+
+        <strong><%= blog.headline %></strong> | <%= blog.name %>
         <br>
+        <br>
+        posted on <%= blog.created_at.in_time_zone("Pacific Time (US & Canada)").strftime "%B %d, %Y %l:%M %P"  %>
+        <br>
+        <br>
+        <%= blog.story %>
+        <br>
+        <hr>
+      </div>
         <% end %>
       </div>
       <div class="col-md-4">
