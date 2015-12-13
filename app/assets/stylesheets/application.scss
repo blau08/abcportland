@@ -234,6 +234,29 @@ ul {
     }
   }
 
-  .thumbnail img{
- height:100px;
-              } 
+  // .hero-feature {
+  //   height: 20em;
+  // }
+  // .hero-feature {
+  //   margin-bottom: 30px;
+  // }
+
+  .fronttitle {
+    padding: 0px;
+    margin: 0;
+  }
+
+  .thumbnail {
+    margin: 0;
+  }
+
+  .container {
+    width: auto;
+    margin: 5px;
+    margin-left: 8em;
+    margin-right: 8em;
+  }
+
+  #overview {
+    background-color: #fff;
+  }

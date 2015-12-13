@@ -14,28 +14,62 @@
     <div class="row">
       <div class="col-md-8">
       <% @blogs.each do |blog| %>
-      <div class="col-md-2">
-        <div class="thumbnail">
-        <%= image_tag blog.image.url(:medium) %>
+      <div class="row">
+
+      <div class="col-md-4">
+        <div class="hero-feature">
+
+          <div class="thumbnail">
+          <%= image_tag blog.image.url(:medium) %>
+          </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" id="overview">
 
-        <strong><%= blog.headline %></strong> | <%= blog.name %>
+        <h3 class="fronttitle"><strong><%= blog.headline %></strong></h3>
+        <br>
+        <%= blog.created_at.in_time_zone("Pacific Time (US & Canada)").strftime "%B %d, %Y %l:%M %P"  %> | <%= blog.name %>
         <br>
         <br>
-        posted on <%= blog.created_at.in_time_zone("Pacific Time (US & Canada)").strftime "%B %d, %Y %l:%M %P"  %>
-        <br>
-        <br>
-        <%= blog.story %>
+        <%= truncate(blog.story, length: 250) %>,
         <br>
         <hr>
       </div>
+    </div>
         <% end %>
       </div>
       <div class="col-md-4">
         <p>
           Steph Curry is a better team player than LeBron.
+          <br>
+          <br>
+          Kobe Bryant
+          <br>
+          <br>
+          LeBron James
+          <br>
+          <br>
+          Michael Jordan
+          <br>
+          <br>
+          Jeremy Lin
+          <br>
+          <br>
+          Jeremy Lin
+          <br>
+          <br>
+          Jeremy Lin
+          <br>
+          <br>
+          Jeremy Lin
+          <br>
+          <br>
+          Jeremy Lin
+          <br>
+          <br>
+          Jeremy Lin
+          <br>
+          <br>
         </p>
       </div>
     </div>
