@@ -257,6 +257,11 @@ ul {
     margin-right: 8em;
   }
 
-  #overview {
+  .overview {
     background-color: #fff;
+    margin: 10px;
+    padding: 10px;
   }
+.img-responsive img {
+  max-width: 100%;
+}
